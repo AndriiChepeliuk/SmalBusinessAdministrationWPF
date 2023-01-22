@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\business-analyst-min.jpg" />
+    <None Remove="Images\cat.png" />
+    <None Remove="Images\crm-statistics.jpg" />
+    <None Remove="Images\GettyImages.jpg" />
+    <None Remove="Images\logo.png" />
+    <None Remove="Images\user-icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Model\" />
+    <Folder Include="ViewModel\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\business-analyst-min.jpg" />
+    <Resource Include="Images\cat.png" />
+    <Resource Include="Images\crm-statistics.jpg" />
+    <Resource Include="Images\GettyImages.jpg" />
+    <Resource Include="Images\logo.png" />
+    <Resource Include="Images\user-icon.png" />
+  </ItemGroup>
+
+</Project>
