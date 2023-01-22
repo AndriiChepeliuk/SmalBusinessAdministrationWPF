@@ -13,14 +13,14 @@
         AllowsTransparency="True"
         MouseDown="Window_MouseDown">
 
-    <Border CornerRadius="15">
+    <Border CornerRadius="12">
         <Border.Background>
-            <ImageBrush ImageSource="/Images/crm-statistics.jpg"
+            <ImageBrush ImageSource="/Images/business-analyst-min.jpg"
                         Stretch="UniformToFill"/>
         </Border.Background>
-        <Border CornerRadius="15"
-            BorderThickness="4"
-            Opacity="0.55">
+        <Border CornerRadius="10"
+            BorderThickness="3"
+            Opacity="0.80">
             <Border.BorderBrush>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                     <GradientStop Color="#462ad8" Offset="0"/>
@@ -35,6 +35,57 @@
                     <GradientStop Color="#1b1448" Offset="0.75"/>
                 </LinearGradientBrush>
             </Border.Background>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="25"/>
+                        <ColumnDefinition Width="25"/>
+                        <ColumnDefinition Width="5"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="LOG IN"
+                               Foreground="DarkGray"
+                               FontSize="12"
+                               FontFamily="Montserrat"
+                               Grid.Column="0"
+                               VerticalAlignment="Center"
+                               Margin="10,0,0,0"/>
+
+                    <Button x:Name="btnMinimize"
+                            Background="#28AEED"
+                            BorderThickness="0"
+                            Content="_"
+                            Foreground="White"
+                            FontSize="16"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            Grid.Column="1"
+                            Click="btnMinimize_Click">
+                        
+                    </Button>
+
+                    <Button x:Name="btnClose"
+                            Background="#DA34AE"
+                            BorderThickness="0"
+                            Content="X"
+                            Foreground="White"
+                            FontSize="12"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            Grid.Column="2"
+                            Click="btnClose_Click">
+                        
+                    </Button>
+                </Grid>
+            </Grid>
+            
         </Border>
     </Border>
 </Window>
