@@ -1,5 +1,10 @@
-﻿using System;
+﻿using SmallBusinessAdministrationWPF.Model;
+using SmallBusinessAdministrationWPF.Repositories;
+using System;
+using System.Net;
 using System.Security;
+using System.Security.Principal;
+using System.Threading;
 using System.Windows.Input;
 
 namespace SmallBusinessAdministrationWPF.ViewModel
@@ -10,6 +15,7 @@ namespace SmallBusinessAdministrationWPF.ViewModel
         private SecureString _password;
         private string _errorMessage;
         private bool _isViewVisible = true;
+        private IUserRepository userRepository;
 
         public string Username
         {
@@ -72,6 +78,7 @@ namespace SmallBusinessAdministrationWPF.ViewModel
 
         public LoginViewModel()
         {
+            userRepository = new UserRepository();
             LoginCommand = new ViewModelCommand(ExecuteLoginCommand, CanExecuteLoginCommand);
             RecoverPasswordCommand = new ViewModelCommand(p => ExecuteRecoverPasswordCommand("", ""));
         }
@@ -99,7 +106,17 @@ namespace SmallBusinessAdministrationWPF.ViewModel
 
         private void ExecuteLoginCommand(object obj)
         {
-            throw new NotImplementedException();
+            var isValidUser = userRepository.AuthenticateUser(new NetworkCredential(Username, Password));
+            if (isValidUser)
+            {
+                Thread.CurrentPrincipal = new GenericPrincipal(
+                    new GenericIdentity(Username), null);
+                IsViewVisible = false;
+            }
+            else
+            {
+                ErrorMessage = "* Invalid username or password";
+            }
         }
     }
 }
