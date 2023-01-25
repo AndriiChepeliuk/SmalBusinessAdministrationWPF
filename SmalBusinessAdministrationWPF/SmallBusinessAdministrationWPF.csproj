@@ -10,21 +10,28 @@
   <ItemGroup>
     <None Remove="Images\business-analyst-min.jpg" />
     <None Remove="Images\cat.png" />
+    <None Remove="Images\cat_logo.png" />
+    <None Remove="Images\cat_logo2.png" />
     <None Remove="Images\crm-statistics.jpg" />
+    <None Remove="Images\eagle_logo.png" />
     <None Remove="Images\GettyImages.jpg" />
     <None Remove="Images\key-icon.png" />
     <None Remove="Images\logo.png" />
+    <None Remove="Images\Logo_SBA.png" />
     <None Remove="Images\user-icon.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="FontAwesome.Sharp" Version="6.2.1" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Images\business-analyst-min.jpg" />
     <Resource Include="Images\cat.png" />
+    <Resource Include="Images\cat_logo.png" />
     <Resource Include="Images\crm-statistics.jpg" />
+    <Resource Include="Images\eagle_logo.png" />
     <Resource Include="Images\GettyImages.jpg" />
     <Resource Include="Images\key-icon.png" />
     <Resource Include="Images\logo.png" />
