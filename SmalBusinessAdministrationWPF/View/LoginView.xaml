@@ -83,10 +83,10 @@
 
                         <Button.Style>
                             <Style TargetType="Button">
-                                <Setter Property="Background" Value="#28AEED"/>
+                                <Setter Property="Background" Value="{StaticResource btnMinimizeColor}"/>
                                 <Style.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#278BEF"/>
+                                        <Setter Property="Background" Value="{StaticResource btnMinimizeColorIsMouseOver}"/>
                                     </Trigger>
                                 </Style.Triggers>
                             </Style>
@@ -117,10 +117,10 @@
 
                         <Button.Style>
                             <Style TargetType="Button">
-                                <Setter Property="Background" Value="#DA34AE"/>
+                                <Setter Property="Background" Value="{StaticResource btnCloseColor}"/>
                                 <Style.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#C62DAE"/>
+                                        <Setter Property="Background" Value="{StaticResource btnCloseColorIsMouseOver}"/>
                                     </Trigger>
                                 </Style.Triggers>
                             </Style>
@@ -173,6 +173,7 @@
 
                     <TextBox x:Name="txtUser"
                              Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}"
+                             
                              FontSize="13"
                              FontWeight="Medium"
                              FontFamily="Montserrat"                            
@@ -205,7 +206,7 @@
                     </customcontrols:BindablePasswordBox>
 
                     <TextBlock Text="{Binding ErrorMessage}"
-                               Foreground="#D7596D"
+                               Foreground="{StaticResource errorMessageColor}"
                                FontSize="14"
                                FontWeight="Medium"
                                FontFamily="Montserrat"
@@ -225,10 +226,10 @@
 
                         <Button.Style>
                             <Style TargetType="Button">
-                                <Setter Property="Background" Value="#462AD8"/>
+                                <Setter Property="Background" Value="{StaticResource loginButtonColor}"/>
                                 <Style.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#28AEED"/>
+                                        <Setter Property="Background" Value="{StaticResource loginButtonColorIsMouseOver}"/>
                                     </Trigger>
                                 </Style.Triggers>
                             </Style>
