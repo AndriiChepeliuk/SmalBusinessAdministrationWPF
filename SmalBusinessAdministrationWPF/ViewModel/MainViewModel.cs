@@ -38,7 +38,7 @@ namespace SmallBusinessAdministrationWPF.ViewModel
             {
 
                 CurrentUserAccount.Username = user.UserName;
-                CurrentUserAccount.DisplayName = $"Welcom {user.Name} {user.LastName}";
+                CurrentUserAccount.DisplayName = $"{user.Name}/{user.LastName}";
                 CurrentUserAccount.ProfilePicture = null;
             }
             else

@@ -18,6 +18,7 @@
     <None Remove="Images\key-icon.png" />
     <None Remove="Images\logo.png" />
     <None Remove="Images\Logo_SBA.png" />
+    <None Remove="Images\profile-foto.jpg" />
     <None Remove="Images\user-icon.png" />
   </ItemGroup>
 
@@ -28,13 +29,10 @@
 
   <ItemGroup>
     <Resource Include="Images\business-analyst-min.jpg" />
-    <Resource Include="Images\cat.png" />
-    <Resource Include="Images\cat_logo.png" />
     <Resource Include="Images\crm-statistics.jpg" />
     <Resource Include="Images\eagle_logo.png" />
-    <Resource Include="Images\GettyImages.jpg" />
     <Resource Include="Images\key-icon.png" />
-    <Resource Include="Images\logo.png" />
+    <Resource Include="Images\profile-foto.jpg" />
     <Resource Include="Images\user-icon.png" />
   </ItemGroup>
 
