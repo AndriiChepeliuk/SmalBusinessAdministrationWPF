@@ -4,7 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SmallBusinessAdministrationWPF.View"
-        xmlns:viewModel="clr-namespace:SmallBusinessAdministrationWPF.ViewModel" xmlns:customcontrols="clr-namespace:SmallBusinessAdministrationWPF.CustomControls"
+        xmlns:viewModel="clr-namespace:SmallBusinessAdministrationWPF.ViewModel" 
+        xmlns:customcontrols="clr-namespace:SmallBusinessAdministrationWPF.CustomControls"
         mc:Ignorable="d"
         Title="LoginView" Height="550" Width="800"
         WindowStyle="None"
@@ -36,16 +37,16 @@
             Opacity="0.90">
             <Border.BorderBrush>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                    <GradientStop Color="#462ad8" Offset="0"/>
-                    <GradientStop Color="#da34ae" Offset="0.75"/>
-                    <GradientStop Color="#8a16c1" Offset="1"/>
+                    <GradientStop Color="{StaticResource winBorderColor1}" Offset="0"/>
+                    <GradientStop Color="{StaticResource winBorderColor2}" Offset="0.75"/>
+                    <GradientStop Color="{StaticResource winBorderColor3}" Offset="1"/>
                 </LinearGradientBrush>
             </Border.BorderBrush>
 
             <Border.Background>
                 <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
-                    <GradientStop Color="#060531" Offset="0"/>
-                    <GradientStop Color="#1b1448" Offset="0.75"/>
+                    <GradientStop Color="{StaticResource primaryBackColor1}" Offset="0"/>
+                    <GradientStop Color="{StaticResource primaryBackColor2}" Offset="0.75"/>
                 </LinearGradientBrush>
             </Border.Background>
 
@@ -83,10 +84,10 @@
 
                         <Button.Style>
                             <Style TargetType="Button">
-                                <Setter Property="Background" Value="#28AEED"/>
+                                <Setter Property="Background" Value="{StaticResource btnMinimizeColor}"/>
                                 <Style.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#278BEF"/>
+                                        <Setter Property="Background" Value="{StaticResource btnMinimizeColorIsMouseOver}"/>
                                     </Trigger>
                                 </Style.Triggers>
                             </Style>
@@ -117,10 +118,10 @@
 
                         <Button.Style>
                             <Style TargetType="Button">
-                                <Setter Property="Background" Value="#DA34AE"/>
+                                <Setter Property="Background" Value="{StaticResource btnCloseColor}"/>
                                 <Style.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#C62DAE"/>
+                                        <Setter Property="Background" Value="{StaticResource btnCloseColorIsMouseOver}"/>
                                     </Trigger>
                                 </Style.Triggers>
                             </Style>
@@ -145,7 +146,7 @@
                         Orientation="Vertical"
                         Margin="0,35,0,0">
 
-                    <Image Source="/Images/logo.png"
+                    <Image Source="/Images/eagle_logo.png"
                            Width="100" Height="100"/>
 
                     <TextBlock Text="SMALL BUSINESS"
@@ -205,7 +206,7 @@
                     </customcontrols:BindablePasswordBox>
 
                     <TextBlock Text="{Binding ErrorMessage}"
-                               Foreground="#D7596D"
+                               Foreground="{StaticResource errorMessageColor}"
                                FontSize="14"
                                FontWeight="Medium"
                                FontFamily="Montserrat"
@@ -225,10 +226,10 @@
 
                         <Button.Style>
                             <Style TargetType="Button">
-                                <Setter Property="Background" Value="#462AD8"/>
+                                <Setter Property="Background" Value="{StaticResource loginButtonColor}"/>
                                 <Style.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#28AEED"/>
+                                        <Setter Property="Background" Value="{StaticResource loginButtonColorIsMouseOver}"/>
                                     </Trigger>
                                 </Style.Triggers>
                             </Style>
