@@ -17,6 +17,18 @@
         <viewModel:MainViewModel/>
     </Window.DataContext>
 
+    <Window.Resources>
+        
+        <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
+            <local:HomeView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModel:CustomerViewModel}">
+            <local:CustomerView/>
+        </DataTemplate>
+        
+    </Window.Resources>
+
     <Border CornerRadius="10"
             BorderThickness="2"
             Opacity="1">
@@ -68,7 +80,9 @@
                         
                         <!--Menu Buttons-->
                         <RadioButton Style="{StaticResource menuButton}"
-                                     Tag="{StaticResource color1}">
+                                     Tag="{StaticResource color1}"
+                                     IsChecked="True"
+                                     Command="{Binding ShowHomeViewCommand}">
 
                             <StackPanel Orientation="Horizontal">
                                 <fa:IconImage Icon="Home" Style="{StaticResource menuButtonIcon}"/>
@@ -76,7 +90,8 @@
                             </StackPanel>
                         </RadioButton>
                         <RadioButton Style="{StaticResource menuButton}"
-                                     Tag="{StaticResource color2}">
+                                     Tag="{StaticResource color2}"
+                                     Command="{Binding ShowCustomerViewCommand}">
 
                             <StackPanel Orientation="Horizontal">
                                 <fa:IconImage Icon="UserGroup" Style="{StaticResource menuButtonIcon}"/>
@@ -207,12 +222,12 @@
                                     Orientation="Horizontal"
                                     VerticalAlignment="Center">
 
-                            <fa:IconImage Icon="Home"
+                            <fa:IconImage Icon="{Binding Icon}"
                                           Height="20"
                                           Width="20"
                                           Foreground="{StaticResource titleColor2}"
                                           Margin="35,0,10,0"/>
-                            <TextBlock Text="Dashboard"
+                            <TextBlock Text="{Binding Caption}"
                                        Foreground="{StaticResource titleColor2}"
                                        FontSize="16"
                                        FontFamily="Montserrat"
@@ -268,7 +283,13 @@
                         </StackPanel>
                         
                     </Grid>
+
+                    <!--Content section / Child views-->
+                    <ContentControl Content="{Binding CurrentChildView}"
+                                    Grid.Row="2"
+                                    Margin="25"/>
                     
+
                 </Grid>
 
             </Border>
